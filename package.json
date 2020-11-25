@@ -1,5 +1,5 @@
 {
-  "name": "codemirror-show-hint",
+  "name": "codemirror-show-hint-addon-options",
   "version": "5.58.3",
   "main": "lib/codemirror.js",
   "style": "lib/codemirror.css",
