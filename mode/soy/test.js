@@ -27,8 +27,13 @@
         '[string "][tag&bracket />]');
 
   MT('soy-element-composition-test',
-     '[tag&bracket <][keyword {][callee&variable foo]()[keyword }]',
-     '[tag&bracket ></>]');
+     '[keyword <{][callee&variable foo]()[keyword }]',
+     '[keyword ></>]');
+
+  MT('soy-element-composition-attribute-test',
+     '[keyword <{][callee&variable foo]()[keyword }]',
+     '[attribute class]=[string "Foo"]',
+     '[keyword ></>]');
 
   MT('namespace-test',
      '[keyword {namespace] [variable namespace][keyword }]')
@@ -189,6 +194,12 @@
   MT('attribute-type-optional',
      '[keyword {template] [def .foo][keyword }]',
      '  [keyword {@attribute] [def bar]: [type string][keyword }]',
+     '[keyword {/template}]',
+     '');
+
+  MT('attribute-type-all',
+     '[keyword {template] [def .foo][keyword }]',
+     '  [keyword {@attribute] [type *][keyword }]',
      '[keyword {/template}]',
      '');
 
